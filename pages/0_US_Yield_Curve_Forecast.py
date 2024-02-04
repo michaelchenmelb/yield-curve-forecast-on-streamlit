@@ -96,7 +96,7 @@ def create_3d_plot(df, start_year, end_year):
 
 st.set_page_config(page_title="US Yield Curve Forecast", page_icon="")
 st.markdown("# US Yield Curve Forecast")
-st.write("""Forecast Period: 2024-2028""")
+st.write("""Forecast Period: 2024 - 2028""")
 
 
 df = pd.read_csv("data/us_yields.csv")
@@ -109,7 +109,7 @@ year_range = st.sidebar.slider(
     "Select Year Range",
     min_value=df["Date"].min().year,
     max_value=df["Date"].max().year,
-    value=(df["Date"].min().year, df["Date"].max().year),
+    value=(2000, df["Date"].max().year),
     step=1,
 )
 
