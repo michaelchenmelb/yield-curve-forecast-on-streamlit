@@ -95,6 +95,9 @@ def create_3d_plot(df, start_year, end_year):
 
 
 st.set_page_config(page_title="US Yield Curve Forecast", page_icon="")
+st.markdown("# US Yield Curve Forecast")
+st.write("""Forecast Period: 2024-2028""")
+
 
 df = pd.read_csv("data/us_yields.csv")
 
