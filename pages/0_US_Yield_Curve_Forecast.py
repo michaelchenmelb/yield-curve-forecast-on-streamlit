@@ -94,7 +94,7 @@ def create_3d_plot(df, start_year, end_year):
     return figure
 
 
-st.set_page_config(page_title="US Yield Curve", page_icon="", layout="wide")
+st.set_page_config(page_title="US Yield Curve", page_icon="")  # , layout="wide"
 hide_default_format = """
     <style>
     #MainMenu {visibility: hidden; }
