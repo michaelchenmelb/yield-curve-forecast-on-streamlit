@@ -94,7 +94,15 @@ def create_3d_plot(df, start_year, end_year):
     return figure
 
 
-st.set_page_config(page_title="US Yield Curve Forecast", page_icon="")
+st.set_page_config(page_title="US Yield Curve", page_icon="", layout="wide")
+hide_default_format = """
+    <style>
+    #MainMenu {visibility: hidden; }
+    footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_default_format, unsafe_allow_html=True)
+
 st.markdown("# US Yield Curve Forecast")
 st.write("""Forecast Period: 2024 - 2028""")
 

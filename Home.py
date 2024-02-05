@@ -6,11 +6,18 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="home",
-        page_icon="👋",
+        page_title="Home",
+        page_icon="",
     )
 
     st.write("# Yield Curve Forecast on Streamlit")
+    hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+    st.markdown(hide_default_format, unsafe_allow_html=True)
     st.markdown("*Michael C, 2024-02-05*")
     st.markdown(
         """
@@ -29,5 +36,6 @@ def run():
 
 
 if __name__ == "__main__":
+
 
     run()
